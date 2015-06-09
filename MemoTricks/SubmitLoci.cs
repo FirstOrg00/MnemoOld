@@ -39,5 +39,7 @@ namespace MemoTricks
         {
             this.Close();
         }
+
+        
     }
 }

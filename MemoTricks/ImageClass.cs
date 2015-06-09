@@ -78,5 +78,48 @@ namespace MemoTricks
 
             return returnImage;
         }
+
+        public Bitmap SetHouseImage(int location)
+        {
+            int space1 = 35;
+            int space2 = 35;
+            switch(location)
+            {
+              case 1:
+              {
+                 return CropImage(Imagini2.loci_house, 890 - space1, 1085 - space1, 540 + space2, 400 + space2);
+              }
+              case 2:
+              {
+                  return CropImage(Imagini2.loci_house, 600 - space1, 1085 - space1, 295 + space2, 395 + space2);
+              }
+              case 3:
+              {
+                  return CropImage(Imagini2.loci_house, 250 - space1, 1085 - space1, 365 + space2, 395 + space2);
+              }
+              case 4:
+              {
+                  return CropImage(Imagini2.loci_house, 1005 - space1, 730 - space1, 430 + space2, 355 + space2);
+              }
+              case 5:
+              {
+                  return CropImage(Imagini2.loci_house, 620 - space1, 730 - space1, 390 + space2, 355 + space2);
+              }
+              case 6:
+              {
+                  return CropImage(Imagini2.loci_house, 235 - space1, 730 - space1, 410 + space2, 355 + space2);
+              }
+              case 7:
+              {
+                  return CropImage(Imagini2.loci_house, 845 - space1, 445 - space1, 475 + space2, 300 + space2);
+              }
+              case 8:
+              {
+                  return CropImage(Imagini2.loci_house, 400 - space1, 430 - space1, 440 + space2, 300 + space2);
+              }
+              
+            }
+            return null;
+        }
     }
 }

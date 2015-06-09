@@ -41,7 +41,8 @@ namespace MemoTricks
             
             labelInfoTestLoci.Visible = false;
             timerTestLoci.Start();
-               SetVisible();
+            SetVisible();
+            SetHouseImage(1);
             
             RandomWords randomWords = new RandomWords();
 
@@ -66,6 +67,7 @@ namespace MemoTricks
                 pos++;
                 labelWords.Text = pos + " : " + words[pos];
                 SetToyImage(words[pos]);
+                SetHouseImage(pos);
                 
             }
         }
@@ -77,6 +79,7 @@ namespace MemoTricks
                 pos--;
                 labelWords.Text = pos + " : " + words[pos];
                 SetToyImage(words[pos]);
+                SetHouseImage(pos);
             }
         }
 
@@ -101,6 +104,7 @@ namespace MemoTricks
             labelWords2.Text = " 1 ";
             panelVerify.Visible = true;
             timerTestLoci.Stop();
+            SetHouseImage(1);
         }
 
         // Contorul care retine numarul raspunsurilor corecte
@@ -113,7 +117,7 @@ namespace MemoTricks
             
 
             wordsCheck[pos2] = textBoxWords.Text.Trim();
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 20; i++)
             {
                 if (wordsCheck[i] == words[i].Trim())
                     rightAnswers++;
@@ -153,6 +157,7 @@ namespace MemoTricks
                 labelWords2.Text = pos2.ToString();
 
                 textBoxWords.Text = wordsCheck[pos2];
+                SetHouseImage(pos2);
                
             }
         }
@@ -165,6 +170,7 @@ namespace MemoTricks
                 pos2++;
                 labelWords2.Text = pos2.ToString();
                 textBoxWords.Text = wordsCheck[pos2];
+                SetHouseImage(pos2);
                 
             }
         }
@@ -240,7 +246,26 @@ namespace MemoTricks
             }
         }
 
-        
+        void SetHouseImage(int location)
+        { 
+            ImageClass imgClass = new ImageClass();
+            if (location <= 4)
+                pictureBoxHelpImage.BackgroundImage = imgClass.SetHouseImage(1);
+            else if (location <= 7)
+                pictureBoxHelpImage.BackgroundImage = imgClass.SetHouseImage(2);
+            else if (location <= 8)
+                pictureBoxHelpImage.BackgroundImage = imgClass.SetHouseImage(3);
+            else if (location <= 11)
+                pictureBoxHelpImage.BackgroundImage = imgClass.SetHouseImage(4);
+            else if (location <= 13)
+                pictureBoxHelpImage.BackgroundImage = imgClass.SetHouseImage(5);
+            else if (location <= 15)
+                pictureBoxHelpImage.BackgroundImage = imgClass.SetHouseImage(6);
+            else if (location <= 18)
+                pictureBoxHelpImage.BackgroundImage = imgClass.SetHouseImage(7);
+            else if (location <= 20)
+                pictureBoxHelpImage.BackgroundImage = imgClass.SetHouseImage(8);
+        }
 
         //Image CropImage(int x, int y, int width, int height)
         //{

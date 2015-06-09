@@ -91,6 +91,7 @@
             this.Controls.Add(this.submitLabel1);
             this.Name = "SubmitLoci";
             this.Text = "SubmitLoci";
+            
             this.ResumeLayout(false);
 
         }

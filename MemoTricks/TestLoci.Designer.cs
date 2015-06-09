@@ -122,9 +122,10 @@
             this.panelVerify.Controls.Add(this.buttonPrevious2);
             this.panelVerify.Controls.Add(this.labelWords2);
             this.panelVerify.Controls.Add(this.textBoxWords);
-            this.panelVerify.Location = new System.Drawing.Point(754, 503);
+            this.panelVerify.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelVerify.Location = new System.Drawing.Point(0, 0);
             this.panelVerify.Name = "panelVerify";
-            this.panelVerify.Size = new System.Drawing.Size(130, 58);
+            this.panelVerify.Size = new System.Drawing.Size(884, 561);
             this.panelVerify.TabIndex = 6;
             this.panelVerify.Visible = false;
             // 
